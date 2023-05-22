@@ -1,0 +1,9 @@
+@import "../../../styles/pallete";
+@import "../../../styles/variables";
+
+.header {
+  background-color: $white;
+  padding: map-get($spacing, "8");
+  color: $defaultTextColor;
+  border-bottom: map-get($spacing, "0.5") solid map-get($grayscale, "Light-1");
+}

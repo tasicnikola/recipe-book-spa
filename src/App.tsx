@@ -1,11 +1,16 @@
-import React from 'react';
-import { BrowserRouter } from "react-router-dom";
-import './App.scss';
+import React from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import "./App.scss";
+import Admin from "./admin/components/Admin";
+import Public from "./public/components/Public";
 
-function App() {
+const App = () => {
   return (
     <BrowserRouter>
-        <h1>SPA</h1>
+      <Routes>
+        <Route path="/admin/*" element={<Admin />} />
+        <Route path="/*" element={<Public />} />
+      </Routes>
     </BrowserRouter>
   );
 }

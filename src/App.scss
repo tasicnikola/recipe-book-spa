@@ -1,38 +1,45 @@
-.App {
-  text-align: center;
+@import "../node_modules/bootstrap/scss/bootstrap";
+@import "./styles/includes";
+
+html {
+  width: 100%;
+  height: 100%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  width: 100%;
+  height: 100%;
+  background-color: map-get($grayscale, "Light-2");
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.inactive {
+  padding: map-get($spacing, "2") !important;
+  display: flex !important;
+  text-decoration: none !important;
+  color: $defaultTextColor !important;
+  justify-self: start !important;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.active {
+  background-color: $primaryColor !important;
+  color: $white !important;
+  display: flex !important;
+  border-radius: map-get($rounded, "3") !important;
+  padding: map-get($spacing, "2") !important;
+  text-decoration: none !important;
 }
 
-.App-link {
-  color: #61dafb;
+.active .MuiListItemIcon-root {
+  color: $white;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.boxed {
+  box-shadow: map-get($shadows, "md");
+  border-radius: map-get($rounded, "3");
+  background-color: $white;
+  min-width: 650px;
+}
+
+.MuiTab-root.Mui-selected {
+  color: $primaryColor !important;
 }

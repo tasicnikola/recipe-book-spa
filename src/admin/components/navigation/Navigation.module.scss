@@ -1,0 +1,26 @@
+@import "../../../styles/variables";
+@import "../../../styles/pallete";
+
+.side-nav {
+  background-color: $white !important;
+  color: $defaultTextColor !important;
+  padding: map-get($spacing, "8") map-get($spacing, "4");
+}
+
+.dbs {
+  color: $defaultTextColor;
+}
+
+.is-full-view {
+  width: $navigation-full-width !important;
+}
+
+.not-full-view {
+  width: $navigation-condensed-width !important;
+}
+
+.avatar {
+  background-color: $white !important;
+  color: $defaultTextColor !important;
+  padding: map-get($spacing, "4") !important;
+}
