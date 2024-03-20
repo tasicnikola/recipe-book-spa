@@ -10,8 +10,9 @@ import classes from "./Navigation.module.scss";
 import { Link } from "react-router-dom";
 import PhoneIcon from "@mui/icons-material/Phone";
 import InstagramIcon from "@mui/icons-material/Instagram";
+import YouTubeIcon from "@mui/icons-material/YouTube";
 
-function ResponsiveAppBar() {
+const Navigation = () => {
   return (
     <AppBar
       position="static"
@@ -19,20 +20,14 @@ function ResponsiveAppBar() {
         root: classes["appbar"],
       }}
     >
-      <Container maxWidth="xl">
+      <Container maxWidth="lg"
+        className="w-100 flex-column container"
+      >
         <Toolbar disableGutters>
           <Box className={"d-flex"}>
             <Typography
-              variant="h5"
-              noWrap
-              sx={{
-                mr: 2,
-                display: { xs: "none", md: "flex" },
-                fontFamily: '"Segoe UI Symbol"',
-                fontWeight: 400,
-                letterSpacing: ".1rem",
-                color: "#929292",
-                textDecoration: "none",
+              classes={{
+                root: classes["header"]
               }}
             >
               Kontaktirajte nas!
@@ -47,16 +42,8 @@ function ResponsiveAppBar() {
             </Box>
 
             <Typography
-              variant="h5"
-              noWrap
-              sx={{
-                mr: 2,
-                display: { xs: "none", md: "flex" },
-                fontFamily: '"Segoe UI"',
-                fontWeight: 500,
-                letterSpacing: ".1rem",
-                color: "#B19A88",
-                textDecoration: "none",
+              classes={{
+                root: classes["header-phonenum"]
               }}
             >
               064/485 94 11
@@ -65,14 +52,20 @@ function ResponsiveAppBar() {
 
           <Container>
             <Box className={classes.instagram}>
+              <Link to="https://www.youtube.com/watch?v=88iJp17Kcdc&ab_channel=RadioTelevizijaPULS">
+                <Tooltip title="YouTube">
+                  <IconButton>
+                    <YouTubeIcon/>
+                  </IconButton>
+                </Tooltip>
+              </Link>
+            </Box>
+
+            <Box className={classes.instagram}>
               <Link to="https://www.instagram.com/ketering_cave_kos.kamenica/">
                 <Tooltip title="Instagram">
                   <IconButton>
-                    <InstagramIcon
-                      classes={{
-                        root: classes["contact-svg"],
-                      }}
-                    />
+                    <InstagramIcon/>
                   </IconButton>
                 </Tooltip>
               </Link>
@@ -83,4 +76,4 @@ function ResponsiveAppBar() {
     </AppBar>
   );
 }
-export default ResponsiveAppBar;
+export default Navigation;

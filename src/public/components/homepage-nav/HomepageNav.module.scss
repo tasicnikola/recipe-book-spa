@@ -1,0 +1,18 @@
+@import "../../../styles/pallete";
+@import "../../../styles/variables";
+
+.nav {
+    display: ruby-text !important;
+}
+
+.appbar {
+    background-color: inherit !important;
+    box-shadow: none !important;
+    display: inline !important;
+}
+
+.nav-link {
+    color: #b19a88 !important;
+    font-size: 0.8rem !important;
+    font-weight: 600 !important;
+}

@@ -6,14 +6,25 @@
     box-shadow: none !important;
 }
 
-.phone {
-    padding: map-get($rounded, "2");
-}
-
 .instagram {
     float: right !important;
 }
 
-.contact-svg {
-    font-size: map-get($sizing, "w-10")!important;
+.header {
+    // display: flex;
+    color: #929292 !important;
+    letter-spacing: .07rem !important;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 400 !important;
+    text-wrap: nowrap !important;
+    padding: 0.13rem;
+}
+
+.header-phonenum  {
+    color: #B19A88 !important;
+    letter-spacing: .07rem !important;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 600 !important;
+    text-wrap: nowrap;
+    padding: 0.13rem;
 }

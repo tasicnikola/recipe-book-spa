@@ -1,8 +1,9 @@
 import React from "react";
+import HomepageNav from "../../components/homepage-nav/HomepageNav";
 
 const Homepage = () => {
     return (
-        <h1>Homepage</h1>
+        <HomepageNav />
     );
 }
 
