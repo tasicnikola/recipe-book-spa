@@ -1,6 +1,6 @@
 import { Box } from "@mui/material";
 import Dashboard from "./dashboard/Dashboard";
-import Navigation from "./navigation/Navigation";
+import Navigation from "./header/Header";
 
 const Public = () => {
   return (

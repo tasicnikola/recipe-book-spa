@@ -1,9 +1,29 @@
 @import "../../../styles/pallete";
 @import "../../../styles/variables";
 
-// .header {
-//   background-color: $white;
-//   padding: map-get($spacing, "8");
-//   color: $defaultTextColor;
-//   border-bottom: map-get($spacing, "0.5") solid map-get($grayscale, "Light-1");
-// }
+.appbar {
+    background-color: #f3f1ec !important;
+    box-shadow: none !important;
+}
+
+.instagram {
+    float: right !important;
+}
+
+.header {
+    color: #929292 !important;
+    letter-spacing: .07rem !important;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 400 !important;
+    text-wrap: nowrap !important;
+    padding: 0.13rem;
+}
+
+.header-phonenum  {
+    color: #B19A88 !important;
+    letter-spacing: .07rem !important;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 600 !important;
+    text-wrap: nowrap;
+    padding: 0.13rem;
+}

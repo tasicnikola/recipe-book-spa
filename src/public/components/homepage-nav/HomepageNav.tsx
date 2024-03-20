@@ -2,16 +2,10 @@ import * as React from "react";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
-import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
-import Tooltip from "@mui/material/Tooltip";
 import classes from "./HomepageNav.module.scss";
-import { Link } from "react-router-dom";
-import PhoneIcon from "@mui/icons-material/Phone";
-import InstagramIcon from "@mui/icons-material/Instagram";
-import YouTubeIcon from "@mui/icons-material/YouTube";
-import { Avatar } from "@mui/material";
+import { Divider } from "@mui/material";
 import { NavLink } from "react-router-dom";
 import Button from "@mui/material/Button";
 
@@ -23,9 +17,10 @@ const HomepageNav = () => {
         root: classes["appbar"],
       }}
     >
-      <Container maxWidth="xl"
+      <Container
+        maxWidth="xl"
         classes={{
-          root: classes["nav"]
+          root: classes["nav"],
         }}
       >
         <Toolbar disableGutters>
@@ -46,7 +41,7 @@ const HomepageNav = () => {
           </Box>
 
           <Box className="d-flex">
-            <Box className="p-3">
+            <Box>
               <NavLink to="">
                 <Button>
                   <Typography
@@ -59,8 +54,15 @@ const HomepageNav = () => {
                 </Button>
               </NavLink>
             </Box>
-
-            <Box className="p-3">
+            <Divider
+              orientation="vertical"
+              variant="middle"
+              flexItem
+              classes={{
+                root: classes["divider"],
+              }}
+            />{" "}
+            <Box>
               <NavLink to="">
                 <Button>
                   <Typography
@@ -73,8 +75,15 @@ const HomepageNav = () => {
                 </Button>
               </NavLink>
             </Box>
-
-            <Box className="p-3">
+            <Divider
+              orientation="vertical"
+              variant="middle"
+              flexItem
+              classes={{
+                root: classes["divider"],
+              }}
+            />{" "}
+            <Box >
               <NavLink to="">
                 <Button>
                   <Typography
@@ -87,8 +96,15 @@ const HomepageNav = () => {
                 </Button>
               </NavLink>
             </Box>
-
-            <Box className="p-3">
+            <Divider
+              orientation="vertical"
+              variant="middle"
+              flexItem
+              classes={{
+                root: classes["divider"],
+              }}
+            />
+            <Box>
               <NavLink to="">
                 <Button>
                   <Typography
