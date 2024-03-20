@@ -1,192 +1,83 @@
-import * as React from 'react';
-import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
-import Toolbar from '@mui/material/Toolbar';
-import IconButton from '@mui/material/IconButton';
-import Typography from '@mui/material/Typography';
-import Menu from '@mui/material/Menu';
-import MenuIcon from '@mui/icons-material/Menu';
-import Container from '@mui/material/Container';
-import Avatar from '@mui/material/Avatar';
-import Tooltip from '@mui/material/Tooltip';
-import MenuItem from '@mui/material/MenuItem';
-import AdbIcon from '@mui/icons-material/Adb';
-import classes from "./Navigation.module.scss"
-import { NavLink } from "react-router-dom";
-import ListItemText from "@mui/material/ListItemText";
-import ListItemIcon from "@mui/material/ListItemIcon";
-
-const settings = ['Profile', 'Logout'];
+import * as React from "react";
+import AppBar from "@mui/material/AppBar";
+import Box from "@mui/material/Box";
+import Toolbar from "@mui/material/Toolbar";
+import IconButton from "@mui/material/IconButton";
+import Typography from "@mui/material/Typography";
+import Container from "@mui/material/Container";
+import Tooltip from "@mui/material/Tooltip";
+import classes from "./Navigation.module.scss";
+import { Link } from "react-router-dom";
+import PhoneIcon from "@mui/icons-material/Phone";
+import InstagramIcon from "@mui/icons-material/Instagram";
 
 function ResponsiveAppBar() {
-  const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
-  const [anchorElUser, setAnchorElUser] = React.useState<null | HTMLElement>(null);
-
-  const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
-    setAnchorElNav(event.currentTarget);
-  };
-  const handleOpenUserMenu = (event: React.MouseEvent<HTMLElement>) => {
-    setAnchorElUser(event.currentTarget);
-  };
-
-  const handleCloseNavMenu = () => {
-    setAnchorElNav(null);
-  };
-
-  const handleCloseUserMenu = () => {
-    setAnchorElUser(null);
-  };
-
   return (
-    <AppBar position="static" className={classes.appbar}>
+    <AppBar
+      position="static"
+      classes={{
+        root: classes["appbar"],
+      }}
+    >
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <Typography
-            variant="h6"
-            noWrap
-            component="a"
-            href="/"
-            sx={{
-              mr: 2,
-              display: { xs: 'none', md: 'flex' },
-              fontFamily: 'monospace',
-              fontWeight: 700,
-              letterSpacing: '.3rem',
-              color: 'inherit',
-              textDecoration: 'none',
-            }}
-          >
-            RecipeBook
-          </Typography>
-
-          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
-            <IconButton
-              size="large"
-              aria-label="account of current user"
-              aria-controls="menu-appbar"
-              aria-haspopup="true"
-              onClick={handleOpenNavMenu}
-              color="inherit"
-            >
-              <MenuIcon />
-            </IconButton>
-            <Menu
-              id="menu-appbar"
-              anchorEl={anchorElNav}
-              anchorOrigin={{
-                vertical: 'bottom',
-                horizontal: 'left',
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: 'top',
-                horizontal: 'left',
-              }}
-              open={Boolean(anchorElNav)}
-              onClose={handleCloseNavMenu}
+          <Box className={"d-flex"}>
+            <Typography
+              variant="h5"
+              noWrap
               sx={{
-                display: { xs: 'block', md: 'none' },
+                mr: 2,
+                display: { xs: "none", md: "flex" },
+                fontFamily: '"Segoe UI Symbol"',
+                fontWeight: 400,
+                letterSpacing: ".1rem",
+                color: "#929292",
+                textDecoration: "none",
               }}
             >
-          <NavLink
-            to="/"
-            className={({ isActive }) =>
-              isActive ? "active my-3" : "inactive my-3"
-            }
-          >
-            <Tooltip title={"HOME"} className="d-flex justify-content-center">
-              <MenuItem key={"HOME"} classes={{ gutters: "w-100" }}>
-                <ListItemIcon
-                  classes={{ root: "d-none justify-content-center" }}
-                >
-                </ListItemIcon>
-                <ListItemText
-                  primary={"HOME"}
-                >
-                  HOME
-                </ListItemText>
-              </MenuItem>
-            </Tooltip>
-          </NavLink>
-          <NavLink
-            to="/"
-          >
-              <MenuItem key={"RECIPES"} classes={{ gutters: "w-100" }}>
-                <ListItemIcon
-                  classes={{ root: "d-none justify-content-center" }}
-                >
-                </ListItemIcon>
-                <ListItemText
-                  primary={"RECIPES"}
-                >
-                  RECIPES
-                </ListItemText>
-              </MenuItem>
-          </NavLink>
-            </Menu>
-          </Box>
-          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-          <NavLink
-            to="/"
-          >
-              <MenuItem key={"HOME"} classes={{ gutters: "w-100" }}>
-                <ListItemIcon
-                  classes={{ root: "d-none justify-content-center" }}
-                >
-                </ListItemIcon>
-                <ListItemText 
-                  primary={"HOME"}
-                >
-                  HOME
-                </ListItemText>
-              </MenuItem>
-          </NavLink>
-          <NavLink
-            to="/"
-          >
-              <MenuItem key={"RECIPES"} classes={{ gutters: "w-100" }}>
-                <ListItemIcon
-                  classes={{ root: "d-none justify-content-center" }}
-                >
-                </ListItemIcon>
-                <ListItemText
-                  primary={"RECIPES"}
-                >
-                  RECIPES
-                </ListItemText>
-              </MenuItem>
-          </NavLink>
+              Kontaktirajte nas!
+            </Typography>
+
+            <Box className={classes.phone}>
+              <PhoneIcon
+                sx={{
+                  color: "#B19A88",
+                }}
+              />
+            </Box>
+
+            <Typography
+              variant="h5"
+              noWrap
+              sx={{
+                mr: 2,
+                display: { xs: "none", md: "flex" },
+                fontFamily: '"Segoe UI"',
+                fontWeight: 500,
+                letterSpacing: ".1rem",
+                color: "#B19A88",
+                textDecoration: "none",
+              }}
+            >
+              064/485 94 11
+            </Typography>
           </Box>
 
-          <Box sx={{ flexGrow: 0 }}>
-            <Tooltip title="Open settings">
-              <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
-              </IconButton>
-            </Tooltip>
-            <Menu
-              sx={{ mt: '45px' }}
-              id="menu-appbar"
-              anchorEl={anchorElUser}
-              anchorOrigin={{
-                vertical: 'top',
-                horizontal: 'right',
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: 'top',
-                horizontal: 'right',
-              }}
-              open={Boolean(anchorElUser)}
-              onClose={handleCloseUserMenu}
-            >
-              {settings.map((setting) => (
-                <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                  <Typography textAlign="center">{setting}</Typography>
-                </MenuItem>
-              ))}
-            </Menu>
-          </Box>
+          <Container>
+            <Box className={classes.instagram}>
+              <Link to="https://www.instagram.com/ketering_cave_kos.kamenica/">
+                <Tooltip title="Instagram">
+                  <IconButton>
+                    <InstagramIcon
+                      classes={{
+                        root: classes["contact-svg"],
+                      }}
+                    />
+                  </IconButton>
+                </Tooltip>
+              </Link>
+            </Box>
+          </Container>
         </Toolbar>
       </Container>
     </AppBar>

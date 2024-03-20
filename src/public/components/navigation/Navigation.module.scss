@@ -2,5 +2,18 @@
 @import "../../../styles/variables";
 
 .appbar {
-    background-color: $primaryColor !important;
+    background-color: #f3f1ec !important;
+    box-shadow: none !important;
+}
+
+.phone {
+    padding: map-get($rounded, "2");
+}
+
+.instagram {
+    float: right !important;
+}
+
+.contact-svg {
+    font-size: map-get($sizing, "w-10")!important;
 }
