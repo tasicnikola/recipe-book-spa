@@ -8,6 +8,7 @@ import classes from "./HomepageNav.module.scss";
 import { Divider } from "@mui/material";
 import { NavLink } from "react-router-dom";
 import Button from "@mui/material/Button";
+import logo from '../../assets/images/logo.jpg'
 
 const HomepageNav = () => {
   return (
@@ -35,8 +36,8 @@ const HomepageNav = () => {
                 maxWidth: { xs: 90, md: 90 },
               }}
               alt="Logo"
-              // src="src\public\assets\images\logo.jpg"
-              src="https://image.shutterstock.com/image-vector/catering-quality-food-design-premium-260nw-1984672004.jpg"
+              src={logo}
+              // src="https://image.shutterstock.com/image-vector/catering-quality-food-design-premium-260nw-1984672004.jpg"
             />
           </Box>
 

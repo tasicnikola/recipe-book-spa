@@ -1,12 +1,30 @@
 import React from "react";
 import HomepageNav from "../../components/homepage-nav/HomepageNav";
-import { Container, Typography } from "@mui/material";
+import { Container, Divider, Typography } from "@mui/material";
+import Carousel from "../../components/carousel/Carousel";
+import Box from "@mui/material/Box";
+import classes from "./Homepage.module.scss";
 
 const Homepage = () => {
   return (
     <Container>
       <HomepageNav />
-      <Typography>test</Typography>
+      <Carousel />
+      <Container
+        classes={{
+          root: classes["divider"],
+        }}
+      >
+        <Divider>
+          <Typography
+            classes={{
+              root: classes["restoran"],
+            }}
+          >
+            RESTORAN
+          </Typography>
+        </Divider>
+      </Container>
     </Container>
   );
 };
