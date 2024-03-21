@@ -4,7 +4,7 @@ import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
-import classes from "./HomepageNav.module.scss";
+import classes from "./Navigation.module.scss";
 import { Divider } from "@mui/material";
 import { NavLink } from "react-router-dom";
 import Button from "@mui/material/Button";
@@ -43,7 +43,7 @@ const HomepageNav = () => {
 
           <Box className="d-flex">
             <Box>
-              <NavLink to="">
+              <NavLink to="/">
                 <Button>
                   <Typography
                     classes={{
@@ -64,7 +64,7 @@ const HomepageNav = () => {
               }}
             />{" "}
             <Box>
-              <NavLink to="">
+              <NavLink to="/ketering">
                 <Button>
                   <Typography
                     classes={{
@@ -85,7 +85,7 @@ const HomepageNav = () => {
               }}
             />{" "}
             <Box >
-              <NavLink to="">
+              <NavLink to="/oprema">
                 <Button>
                   <Typography
                     classes={{
@@ -106,7 +106,7 @@ const HomepageNav = () => {
               }}
             />
             <Box>
-              <NavLink to="">
+              <NavLink to="/cenovnik">
                 <Button>
                   <Typography
                     classes={{

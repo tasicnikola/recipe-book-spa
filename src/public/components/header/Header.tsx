@@ -50,7 +50,7 @@ const Header = () => {
             </Typography>
           </Box>
 
-          <Container>
+          <Container className="p-0">
             <Box className={classes.instagram}>
               <Link to="https://www.youtube.com/watch?v=88iJp17Kcdc&ab_channel=RadioTelevizijaPULS">
                 <Tooltip title="YouTube">
